@@ -24,7 +24,7 @@
 {% block content %}
 	<article class="full">
 		
-		<h1>{{ article.title }}</h1>
+		<h2>{{ article.title }}</h2>
 		
 		{% include 'metadata.inc.html' %}
 		
@@ -53,3 +53,5 @@
 	{% endif %}
 
 {% endblock %}
+
+{% block last_modified %}{{ article.date | string | truncate(16,True,'') }}{% endblock %}

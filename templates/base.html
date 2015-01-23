@@ -40,7 +40,7 @@
         </div>
         {% if PAGES %}
           <nav class="pages">
-            {% for p in PAGES | sort(attribute='idx') %}
+            {% for p in PAGES | sort(attribute='order') %}
                 <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
               {% if not loop.last %}-{% endif %}
             {% endfor %}
@@ -60,7 +60,7 @@
 
               {% if PELICAN_SOBER_ABOUT %}
                 <aside>
-                  <h3>About</h3>
+                  <h3>contact:</h3>
                   <p>
                     {{ PELICAN_SOBER_ABOUT }}
                   </p>
@@ -69,7 +69,7 @@
 
               {% if SOCIAL %}
                 <aside>
-                <h3>External</h3>
+                <h3>other web presence:</h3>
                   <ul class="social">
                     {% for name, link in SOCIAL %}
                     <li><a href="{{ link }}">{{ name }}</a><i></i></li>
@@ -80,8 +80,8 @@
 
               {% if LINKS %}
                 <aside>
-                  <h3>Links</h3>
-                  <ul>
+                  <h3>other sites:</h3>
+                  <ul class="links">
                     {% for name, link in LINKS %}
                       <li><a href="{{ link }}">{{ name }}</a></li>
                     {% endfor %}
@@ -94,9 +94,10 @@
       </div>
 
       <footer>
-        <p role="contentinfo">
+        <span role="contentinfo">
           &copy; {{ AUTHOR }} - Powered by <a href="http://blog.getpelican.com">pelican</a>, with <a href="https://github.com/fle/pelican-sober">pelican-sober</a> theme.
-        </p>
+        </span>
+        <span role="contentinfo" class="lastmod">Last modified: {% block last_modified %}{% endblock %}</span>
 
       </footer>
 

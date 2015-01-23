@@ -75,6 +75,9 @@ footer {
   font-size: 0.8em;
 }
 
+footer .lastmod {
+  float: right
+}
 
 /* Header */
 
@@ -83,7 +86,7 @@ header a {
 }
 
 header a.title {
-  font-size: 1.25em;
+  font-size: 2.2em;
 }
 
 header .feeds {
@@ -143,6 +146,10 @@ h1 a {
 
 p {
   text-align: justify;
+}
+
+aside p {
+  text-align: left;
 }
 
 a {
@@ -238,7 +245,7 @@ ol.archive li .tags
 
 .social {
   list-style-type: none;
-  padding-left: 20px;
+  padding-left: 0px;
 }
 
 .social li {
@@ -263,6 +270,9 @@ ol.archive li .tags
 .social a[href*='rss.xml']:before {content: url('../images/icons/feed-18px.png'); }
 .social a[href*='atom.xml']:before {content: url('../images/icons/feed-18px.png'); }
 
+.links {
+  padding-left: 0px;
+}
 
 /* Tag cloud */
 
