@@ -23,12 +23,12 @@
 
 {% block content %}
 	<article class="full">
-		
+
 		<h2>{{ article.title }}</h2>
-		
+
 		{% include 'metadata.inc.html' %}
-		
-		{{ article.content }}	
+
+		{{ article.content }}
 
 	</article>
 
@@ -54,4 +54,4 @@
 
 {% endblock %}
 
-{% block last_modified %}{{ article.date | string | truncate(16,True,'') }}{% endblock %}
+{% block last_modified %}{{ article.date | strftime('%Y-%m-%d') }}{% endblock %}

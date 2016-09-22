@@ -9,6 +9,7 @@
     {% endblock %}
 
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran" type="text/css" />
 
     {% if PELICAN_SOBER_STICKY_SIDEBAR %}
       <script type="text/javascript" src="{{ SITEURL }}/theme/js/custom_scripts.js"></script>
@@ -60,7 +61,7 @@
 
               {% if PELICAN_SOBER_ABOUT %}
                 <aside>
-                  <h3>contact:</h3>
+                  <h3 class="sidetitle">contact:</h3>
                   <p>
                     {{ PELICAN_SOBER_ABOUT }}
                   </p>
@@ -69,7 +70,7 @@
 
               {% if SOCIAL %}
                 <aside>
-                <h3>other profiles:</h3>
+                <h3 class="sidetitle">other profiles:</h3>
                   <ul class="social">
                     {% for name, link in SOCIAL %}
                     <li><a href="{{ link }}">{{ name }}</a><i></i></li>
@@ -80,7 +81,7 @@
 
               {% if LINKS %}
                 <aside>
-                  <h3>other sites:</h3>
+                  <h3 class="sidetitle">other sites:</h3>
                   <ul class="links">
                     {% for name, link in LINKS %}
                       <li><a href="{{ link }}">{{ name }}</a></li>

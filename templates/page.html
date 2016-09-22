@@ -3,9 +3,8 @@
 
 {% block content %}
 
-<h2>{{ page.title }}</h2>
-{{ page.content }}		
+{{ page.content }}
 
 {% endblock %}
 
-{% block last_modified %}{{ page.date | string | truncate(16,True,'') }}{% endblock %}
+{% block last_modified %}{{ page.date | strftime('%Y-%m-%d') }}{% endblock %}
